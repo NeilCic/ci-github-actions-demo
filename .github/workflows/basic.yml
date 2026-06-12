@@ -1,0 +1,16 @@
+name: Show Repository
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: write greeting msg
+	run: echo "Hello, CI with GitHub Actions!"
