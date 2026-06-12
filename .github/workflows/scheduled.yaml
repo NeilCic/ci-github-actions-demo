@@ -1,0 +1,13 @@
+name: Cron scheduled message
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  scheduled_message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print message
+        run: echo "Scheduled build completed successfully!"
